@@ -42,7 +42,6 @@ install:
     - sudo update-alternatives --install /usr/bin/luajit luajit /usr/bin/luajit-2.* 90
     - sudo update-alternatives --install /usr/bin/pypy3 pypy3 /opt/pypy3/bin/pypy3.2 90
     - sudo python3 get-pip.py
-    - sudo ./cargo-nightly-x86_64-unknown-linux-gnu/install.sh
     - ghc --version
     - cabal --version
     - racket --version
@@ -60,4 +59,6 @@ install:
     - (cd benchmark; cargo build --release)
     - make -k
 
-script: benchmark/target/release/benchmark <benchmark.toml
+script: 
+    - benchmark/target/release/benchmark <benchmark.toml
+    - python2 Python/swapview.py
