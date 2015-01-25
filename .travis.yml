@@ -25,8 +25,9 @@ before_install:
     - sudo apt-get update
 
 install:
+    - df 
     - sudo apt-get install python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer 
-    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy coffeescript racket ruby chicken-bin julia php5 valac-0.28 mono-complete bc
+    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy coffeescript racket ruby chicken-bin julia php5 valac-0.28 mono-devel bc
     - sudo apt-get install r-base
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
