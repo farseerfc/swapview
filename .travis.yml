@@ -21,10 +21,11 @@ before_install:
     - sudo add-apt-repository ppa:fkrull/deadsnakes -y
     - sudo add-apt-repository ppa:staticfloat/juliareleases -y
     - sudo add-apt-repository ppa:kalon33/gamesgiroll -y
+    - sudo add-apt-repository ppa:vala-team -y
     - sudo apt-get update
 
 install:
-    - sudo apt-get install python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer lua5.2 lua5.1 luajit lua-filesystem python3 pypy racket ruby coffeescript chicken-bin julia php5
+    - sudo apt-get install python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer lua5.2 lua5.1 luajit lua-filesystem python3 pypy racket ruby coffeescript chicken-bin julia php5 vala mono-complete r-base
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 90
@@ -57,7 +58,7 @@ install:
     - sudo pip3 install toml
     - cargo --version
     - (cd benchmark; cargo build --release)
-    - make -k
+    - make -k || true
 
 script: 
     - benchmark/target/release/benchmark <benchmark.toml
