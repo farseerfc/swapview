@@ -31,13 +31,13 @@ install:
     - df -h
     - sudo apt-get install chicken-bin 
     - df -h
-    - sudo apt-get install julia
-    - df -h
     - sudo apt-get install php5 
     - df -h
     - sudo apt-get install mono-devel 
     - df -h
     - sudo apt-get install r-base
+    - df -h
+    - sudo apt-get install julia
     - df -h
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
