@@ -12,7 +12,6 @@ before_install:
     - mv pypy3-2.4.0-linux64 pypy3
     - sudo cp -r pypy3 /opt
     - wget https://bootstrap.pypa.io/get-pip.py
-    - tar xf cargo-nightly-x86_64-unknown-linux-gnu.tar.gz
     - sudo add-apt-repository ppa:hansjorg/rust -y
     - sudo add-apt-repository ppa:webupd8team/java -y
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
