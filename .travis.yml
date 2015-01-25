@@ -26,9 +26,10 @@ before_install:
 
 install:
     - sudo apt-get install python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer 
-    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy racket ruby coffeescript chicken-bin julia php5 vala-0.28 mono-complete 
+    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy racket ruby chicken-bin julia php5 valac-0.28 mono-complete bc
     - sudo apt-get install r-base
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
+    - sudo npm install -g coffee-script
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 90
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 90
@@ -59,6 +60,7 @@ install:
     - cabal install strict
     - sudo pip3 install toml
     - cargo --version
+    - mcs --version
     - (cd benchmark; cargo build --release)
     - make -k || true
 
