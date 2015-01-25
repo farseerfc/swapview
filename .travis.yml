@@ -25,11 +25,17 @@ before_install:
 
 install:
     - df -h
-    - sudo apt-get install python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer 
+    - sudo apt-get install bc ruby python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer 
     - df -h
     - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy coffeescript racket 
     - df -h
-    - sudo apt-get install ruby chicken-bin julia php5 mono-devel bc
+    - sudo apt-get install chicken-bin 
+    - df -h
+    - sudo apt-get install julia
+    - df -h
+    - sudo apt-get install php5 
+    - df -h
+    - sudo apt-get install mono-devel 
     - df -h
     - sudo apt-get install r-base
     - df -h
