@@ -40,6 +40,7 @@ install:
     - df -h || free -h
     - sudo apt-get install julia
     - df -h || free -h
+    - sudo rm /etc/parallel/config || true
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 90
@@ -74,6 +75,7 @@ install:
     - mcs --version
     - (cd benchmark; cargo build --release)
     - make -k || true
+    - guile Guile/swapview.scm
 
 script: 
     - benchmark/target/release/benchmark <benchmark.toml
