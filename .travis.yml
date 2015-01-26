@@ -73,6 +73,8 @@ install:
     - sudo pip3 install toml
     - cargo --version
     - mcs --version
+    - coffee --version
+    - parallel --version
     - (cd benchmark; cargo build --release)
     - make -k || true
     - guile Guile/swapview.scm
