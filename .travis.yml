@@ -26,7 +26,7 @@ install:
     - df -h || free -h
     - sudo apt-get install bc parallel ruby python3.4 dmd g++-4.9 libstdc++-4.9-dev boost1.55 ghc-7.8.4 cabal-install-1.22 ocaml fp-compiler nodejs npm sbcl elixir erlang golang guile-2.0 oracle-java8-installer 
     - df -h || free -h
-    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy coffeescript racket 
+    - sudo apt-get install lua5.2 lua5.1 luajit lua-filesystem python3 pypy racket
     - df -h || free -h
     - sudo apt-get install chicken-bin 
     - df -h || free -h
@@ -40,6 +40,7 @@ install:
     - df -h || free -h
     - sudo apt-get install julia
     - df -h || free -h
+    - sudo npm install -g coffee-script
     - sudo rm /etc/parallel/config || true
     - curl https://static.rust-lang.org/rustup.sh | sudo sh -
     - echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
