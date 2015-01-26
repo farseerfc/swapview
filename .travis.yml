@@ -74,7 +74,7 @@ install:
     - cabal install strict
     - sudo pip3 install toml
     - cargo --version
-    - mcs --version
+    - dmcs --version
     - node -v
     - coffee --version
     - parallel --version
