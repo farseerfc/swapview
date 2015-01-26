@@ -45,10 +45,10 @@ getSwapFor <- function(pid){
 getSwap <- function(){
   all = sapply(sapply(list.files("/proc", pattern="^[0-9]+$"), strtoi), getSwapFor)
   all = all[, all[2,] > 0]
-  all = data.frame(pid=unlist(unname(all[1,])), 
+  if(length(all)>0){
+      all = data.frame(pid=unlist(unname(all[1,])), 
                    size=unlist(unname(all[2,])), 
                    comm=unlist(unname(all[3,])))
-  if(length(all)>0){
       all = all[order(all[,2]),]
   }
   all
